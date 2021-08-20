@@ -1,0 +1,7 @@
+{
+  "name": "vue3-gravatar",
+  "version": "3.0.0",
+  "dependencies": {
+    "md5": "^2.3.0"
+  }
+}
