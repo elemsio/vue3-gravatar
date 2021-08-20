@@ -21,7 +21,7 @@ export default {
     return { finalSize: 200 };
   },
   created() {
-    this.finalSize = Number(size);
+    this.finalSize = Number(this.size);
 
     if (this.finalSize < 24) {
       this.finalSize = 24;
@@ -39,9 +39,7 @@ export default {
   },
   render() {
     return h("img", {
-      props: {
-        src: this.gravatarUrl(),
-      },
+      src: this.gravatarUrl,
     });
   },
 };

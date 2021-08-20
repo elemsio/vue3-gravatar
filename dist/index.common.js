@@ -2185,17 +2185,31 @@ var md5_default = /*#__PURE__*/__webpack_require__.n(md5);
       default: "div"
     }
   },
+  data: function data() {
+    return {
+      finalSize: 200
+    };
+  },
+  created: function created() {
+    this.finalSize = Number(this.size);
+
+    if (this.finalSize < 24) {
+      this.finalSize = 24;
+    }
+
+    if (this.finalSize > 2048) {
+      this.finalSize = 2048;
+    }
+  },
   computed: {
     gravatarUrl: function gravatarUrl() {
       var hash = md5_default()(this.email.trim().toLowerCase());
-      return "https://www.gravatar.com/avatar/".concat(hash, "?s=").concat(this.size);
+      return "https://www.gravatar.com/avatar/".concat(hash, "?s=").concat(this.finalSize);
     }
   },
   render: function render() {
     return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["h"])("img", {
-      props: {
-        src: this.gravatarUrl
-      }
+      src: this.gravatarUrl
     });
   }
 });
