@@ -1,6 +1,8 @@
 # Vue 3 - Gravatar Component
 
-Not compatible with Vue 2
+Very simple gravatar component made vor Vue 3.
+
+Not compatible with Vue 2.
 
 ## Table of Contents
 
@@ -17,9 +19,7 @@ npm install vue3-gravatar
 
 ## Usage
 
-### 1.) Add plugin to Vue
-
-You can define your custom breakpoints:
+### 1.) Add plugin to Vue (main.js/ts)
 
 ```js
 import VueGravatar from "vue3-gravatar";
@@ -28,7 +28,7 @@ app.use(VueGravatar);
 app.mount("#app");
 ```
 
-### 2.) Usage (no import needed)
+### 2.) Your Templates (no import needed)
 
 ```html
 <vue-gravatar :email="user.email" :size="150" />
