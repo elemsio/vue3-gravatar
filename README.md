@@ -1,1 +1,1 @@
-<h1>Vue 3 - Gravatar (Typescript)</h1>
+<h1>Vue 3 - Gravatar Component</h1>
