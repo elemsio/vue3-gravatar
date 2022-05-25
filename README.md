@@ -31,5 +31,7 @@ app.mount("#app");
 ### 2.) Your Templates (no import needed)
 
 ```html
-<vue-gravatar :email="user.email" :size="150" />
+<vue-gravatar :email="user.email" :size="150" default-image="mp"/>
 ```
+
+When the default image is left blank, 404 will be used. All possible options can be found [here](https://nl.gravatar.com/site/implement/images/).

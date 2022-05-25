@@ -2183,6 +2183,10 @@ var md5_default = /*#__PURE__*/__webpack_require__.n(md5);
     tag: {
       type: String,
       default: "div"
+    },
+    defaultImage: {
+      type: String,
+      default: '404'
     }
   },
   data: function data() {
@@ -2204,7 +2208,7 @@ var md5_default = /*#__PURE__*/__webpack_require__.n(md5);
   computed: {
     gravatarUrl: function gravatarUrl() {
       var hash = md5_default()(this.email.trim().toLowerCase());
-      return "https://www.gravatar.com/avatar/".concat(hash, "?s=").concat(this.finalSize);
+      return "https://www.gravatar.com/avatar/".concat(hash, "?s=").concat(this.finalSize, "&d=").concat(this.defaultImage);
     }
   },
   render: function render() {

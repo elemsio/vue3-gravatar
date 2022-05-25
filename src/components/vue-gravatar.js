@@ -16,6 +16,10 @@ export default {
       type: String,
       default: "div",
     },
+    defaultImage: {
+      type: String,
+      default: '404'
+    }
   },
   data() {
     return { finalSize: 200 };
@@ -34,7 +38,7 @@ export default {
   computed: {
     gravatarUrl() {
       const hash = md5(this.email.trim().toLowerCase());
-      return `https://www.gravatar.com/avatar/${hash}?s=${this.finalSize}`;
+      return `https://www.gravatar.com/avatar/${hash}?s=${this.finalSize}&d=${this.defaultImage}`;
     },
   },
   render() {
